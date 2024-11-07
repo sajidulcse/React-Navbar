@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.navbar {
+  background-color: #333; /* Background color for the navbar */
+  color: white; /* Text color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px; /* Padding inside the navbar */
+}
+
+.logo {
+  width: 70px; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio */
+  margin-right: 15px; /* Adds space between the logo and title */
+  margin-left: 40px;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.navbar h3 {
+  margin: 0; /* Remove default margin */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.nav-menu {
+  list-style-type: none; /* Remove default list styles */
+  margin: 0px 60px; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex;
+}
+
+.nav-menu li {
+  position: relative; /* For positioning sub-menus */
+  margin-right: 50px; /* Spacing between menu items */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-menu li:last-child {
+  margin-right: 0; /* Remove margin from the last menu item */
+}
+
+.nav-menu li:hover {
+  color: rgb(220, 214, 205);
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  display: none; /* Hide submenu by default */
+  position: absolute;
+  top: 100%; /* Position below the parent item */
+  left: 0;
+  background-color: #444; /* Background color for submenu */
+  list-style-type: none;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  z-index: 1;
+  min-width: 150px; /* Minimum width for dropdown */
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  white-space: nowrap; /* Prevent text wrapping */
+  color: white;
+}
+
+.dropdown-menu li:hover {
+  background-color: #555; /* Hover effect for submenu items */
+}
+
+/* Show submenu only on hover of the parent */
+.nav-menu li:hover .dropdown-menu {
+  display: block;
+}
